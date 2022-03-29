@@ -1,0 +1,43 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 3286461 */
+  src: url('./iconfont.woff2?t=1648536808579') format('woff2'),
+       url('./iconfont.woff?t=1648536808579') format('woff'),
+       url('./iconfont.ttf?t=1648536808579') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.go-icon-video:before {
+  content: "\e607";
+}
+
+.go-icon-collection:before {
+  content: "\e60a";
+}
+
+.go-icon-music:before {
+  content: "\e667";
+}
+
+.go-icon-radio-station:before {
+  content: "\e636";
+}
+
+.go-icon-music-list:before {
+  content: "\e761";
+}
+
+.go-icon-recommend:before {
+  content: "\e70c";
+}
+
+.go-icon-local:before {
+  content: "\e609";
+}
+
