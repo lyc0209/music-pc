@@ -10,7 +10,7 @@
         </el-header>
         <el-main>
           <el-scrollbar>
-            <router-view />
+            <router-view class="router-view" />
           </el-scrollbar>
         </el-main>
         <el-footer>
@@ -44,6 +44,9 @@ import MyFooter from "@/components/layout/footer/MyFooter.vue"
 .el-main {
   overflow: hidden;
   flex: 1;
+}
+.router-view {
+  margin: 0 80px 0;
 }
 //.el-footer {
 //  position: fixed;

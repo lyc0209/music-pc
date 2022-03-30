@@ -1,7 +1,8 @@
 import lycRequest from "@/service"
 
 enum RecommendApi {
-  Banner = "banner"
+  Banner = "banner",
+  musicList = "personalized"
 }
 
 /**
@@ -10,5 +11,15 @@ enum RecommendApi {
 export function getBannerList() {
   return lycRequest.get({
     url: RecommendApi.Banner
+  })
+}
+
+/**
+ * 获取推荐歌单
+ * @param data 传参
+ */
+export function getMusicList(data: { limit: number }) {
+  return lycRequest.get({
+    url: `${RecommendApi.musicList}?limit=${data.limit}`
   })
 }

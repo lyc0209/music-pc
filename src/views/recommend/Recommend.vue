@@ -2,6 +2,7 @@
   <div class="recommend-main">
     <h1>推荐</h1>
     <my-banner :bannerList="bannerList" />
+    <recommend-music-list />
   </div>
 </template>
 
@@ -9,6 +10,7 @@
 import MyBanner from "@/components/common/banner/MyBanner.vue"
 import { useStore } from "@/store"
 import { computed } from "vue"
+import RecommendMusicList from "@/components/layout/recommend/RecommendMusicList.vue"
 
 const store = useStore()
 
