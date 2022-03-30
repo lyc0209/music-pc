@@ -2,6 +2,7 @@ import { Module } from "vuex"
 import { IRecommendState } from "@/store/recommend/types"
 import { IRootState } from "@/store/types"
 import { getBannerList, getMusicList } from "@/service/recommend/recommend"
+import { IMusicItem } from "@/components/common/music-list/types"
 
 const recommendModule: Module<IRecommendState, IRootState> = {
   namespaced: true,
@@ -13,7 +14,7 @@ const recommendModule: Module<IRecommendState, IRootState> = {
     updateBannerList(state, bannerList: any[]) {
       state.bannerList = bannerList
     },
-    updateMusicList(state, musicList: any[]) {
+    updateMusicList(state, musicList: IMusicItem[]) {
       state.musicList = musicList
     }
   },
@@ -24,7 +25,10 @@ const recommendModule: Module<IRecommendState, IRootState> = {
     },
     async getMusicListAction({ commit }, payload: { limit: number }) {
       const result = await getMusicList(payload)
-      commit("updateMusicList", result.result)
+      const list: IMusicItem[] = result.result.map((item: any) => {
+        return { id: item.id, name: item.name, picUrl: item.picUrl, playCount: item.playCount }
+      })
+      commit("updateMusicList", list)
     }
   },
   getters: {

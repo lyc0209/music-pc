@@ -2,6 +2,7 @@ import { InjectionKey } from "vue"
 import { createStore, useStore as baseUseStore, Store } from "vuex"
 import { IRootState, IStoreType } from "@/store/types"
 import recommend from "@/store/recommend/recommend"
+import musicHall from "@/store/music-hall/music-hall"
 
 export const key: InjectionKey<Store<IStoreType>> = Symbol()
 
@@ -10,7 +11,8 @@ const store = createStore<IRootState>({
     count: 0
   }),
   modules: {
-    recommend
+    recommend,
+    musicHall
   }
 })
 

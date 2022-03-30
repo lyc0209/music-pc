@@ -2,25 +2,25 @@
 // We suggest you to commit this file into source control
 // Read more: https://github.com/vuejs/vue-next/pull/3399
 
-declare module "vue" {
+declare module 'vue' {
   export interface GlobalComponents {
-    ElAffix: typeof import("element-plus/es")["ElAffix"]
-    ElAside: typeof import("element-plus/es")["ElAside"]
-    ElCarousel: typeof import("element-plus/es")["ElCarousel"]
-    ElCarouselItem: typeof import("element-plus/es")["ElCarouselItem"]
-    ElContainer: typeof import("element-plus/es")["ElContainer"]
-    ElFooter: typeof import("element-plus/es")["ElFooter"]
-    ElHeader: typeof import("element-plus/es")["ElHeader"]
-    ElImage: typeof import("element-plus/es")["ElImage"]
-    ElMain: typeof import("element-plus/es")["ElMain"]
-    ElScrollbar: typeof import("element-plus/es")["ElScrollbar"]
-    ElTabPane: typeof import("element-plus/es")["ElTabPane"]
-    ElTabs: typeof import("element-plus/es")["ElTabs"]
-    MyBanner: typeof import("./src/components/common/banner/MyBanner.vue")["default"]
-    MyFooter: typeof import("./src/components/layout/footer/MyFooter.vue")["default"]
-    MyHeader: typeof import("./src/components/layout/header/MyHeader.vue")["default"]
-    MyMenu: typeof import("./src/components/layout/menu/MyMenu.vue")["default"]
+    ElAffix: typeof import('element-plus/es')['ElAffix']
+    ElAside: typeof import('element-plus/es')['ElAside']
+    ElCarousel: typeof import('element-plus/es')['ElCarousel']
+    ElCarouselItem: typeof import('element-plus/es')['ElCarouselItem']
+    ElContainer: typeof import('element-plus/es')['ElContainer']
+    ElFooter: typeof import('element-plus/es')['ElFooter']
+    ElHeader: typeof import('element-plus/es')['ElHeader']
+    ElImage: typeof import('element-plus/es')['ElImage']
+    ElMain: typeof import('element-plus/es')['ElMain']
+    ElScrollbar: typeof import('element-plus/es')['ElScrollbar']
+    ElTabPane: typeof import('element-plus/es')['ElTabPane']
+    ElTabs: typeof import('element-plus/es')['ElTabs']
+    MyBanner: typeof import('./src/components/common/banner/MyBanner.vue')['default']
+    MyFooter: typeof import('./src/components/layout/footer/MyFooter.vue')['default']
+    MyHeader: typeof import('./src/components/layout/header/MyHeader.vue')['default']
+    MyMenu: typeof import('./src/components/layout/menu/MyMenu.vue')['default']
   }
 }
 
-export {}
+export { }

@@ -7,9 +7,10 @@
 
 <script setup lang="ts">
 import { defineProps } from "vue"
+import { IMusicItem } from "@/components/common/music-list/types"
 
 defineProps<{
-  musicItem: object
+  musicItem: IMusicItem
 }>()
 </script>
 
