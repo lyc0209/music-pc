@@ -2,12 +2,16 @@
   <div class="music-item">
     <el-image :src="musicItem.picUrl" />
     <div class="music-name">{{ musicItem.name }}</div>
+    <div class="play-number">
+      <span>{{ useNumberFormat(musicItem.playCount || 0) }}</span>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { defineProps } from "vue"
 import { IMusicItem } from "@/components/common/music-list/types"
+import { useNumberFormat } from "@/utils/number"
 
 defineProps<{
   musicItem: IMusicItem
@@ -16,6 +20,7 @@ defineProps<{
 
 <style scoped lang="less">
 .music-item {
+  position: relative;
   width: 18%;
   min-width: 18%;
   max-width: 18%;
@@ -40,6 +45,16 @@ defineProps<{
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
+  }
+
+  .play-number {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 6px;
+    margin-right: 6px;
+    color: white;
+    font-size: 14px;
   }
 }
 </style>
