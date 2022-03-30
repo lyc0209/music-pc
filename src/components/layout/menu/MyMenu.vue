@@ -24,7 +24,7 @@
 </template>
 
 <script setup lang="ts">
-import { Logo } from "../../assets/img"
+import { Logo } from "../../../assets/img"
 import { useMenus } from "./use-menus"
 
 const { menus, currentKey, click } = useMenus()

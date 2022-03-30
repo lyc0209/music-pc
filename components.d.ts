@@ -13,10 +13,10 @@ declare module "vue" {
     ElImage: typeof import("element-plus/es")["ElImage"]
     ElMain: typeof import("element-plus/es")["ElMain"]
     ElScrollbar: typeof import("element-plus/es")["ElScrollbar"]
-    MyBanner: typeof import("./src/components/banner/MyBanner.vue")["default"]
-    MyFooter: typeof import("./src/components/footer/MyFooter.vue")["default"]
-    MyHeader: typeof import("./src/components/header/MyHeader.vue")["default"]
-    MyMenu: typeof import("./src/components/menu/MyMenu.vue")["default"]
+    MyBanner: typeof import("./src/components/common/banner/MyBanner.vue")["default"]
+    MyFooter: typeof import("./src/components/layout/footer/MyFooter.vue")["default"]
+    MyHeader: typeof import("./src/components/layout/header/MyHeader.vue")["default"]
+    MyMenu: typeof import("./src/components/layout/menu/MyMenu.vue")["default"]
   }
 }
 

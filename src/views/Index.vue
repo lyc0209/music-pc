@@ -22,9 +22,9 @@
 </template>
 
 <script setup lang="ts">
-import MyMenu from "@/components/menu/MyMenu.vue"
-import MyHeader from "@/components/header/MyHeader.vue"
-import MyFooter from "@/components/footer/MyFooter.vue"
+import MyMenu from "@/components/layout/menu/MyMenu.vue"
+import MyHeader from "@/components/layout/header/MyHeader.vue"
+import MyFooter from "@/components/layout/footer/MyFooter.vue"
 </script>
 
 <style scoped lang="less">

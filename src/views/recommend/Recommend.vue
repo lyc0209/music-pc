@@ -6,7 +6,7 @@
 </template>
 
 <script setup lang="ts">
-import MyBanner from "@/components/banner/MyBanner.vue"
+import MyBanner from "@/components/common/banner/MyBanner.vue"
 import { useStore } from "@/store"
 import { computed } from "vue"
 

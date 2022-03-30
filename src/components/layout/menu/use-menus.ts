@@ -1,4 +1,4 @@
-import { IMenu, IMenuGroup } from "@/components/menu/types"
+import { IMenu, IMenuGroup } from "@/components/layout/menu/types"
 import { Pages } from "@/router/pages"
 import { useRoute, useRouter } from "vue-router"
 import { ref, watch } from "vue"
