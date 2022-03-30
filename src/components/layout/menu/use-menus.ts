@@ -17,7 +17,7 @@ export const useMenus = () => {
         },
         {
           name: "音乐馆",
-          key: "music",
+          key: Pages.musicHall,
           icon: Icon.music,
           theme: "outline"
         },

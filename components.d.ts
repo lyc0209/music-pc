@@ -4,6 +4,7 @@
 
 declare module "vue" {
   export interface GlobalComponents {
+    ElAffix: typeof import("element-plus/es")["ElAffix"]
     ElAside: typeof import("element-plus/es")["ElAside"]
     ElCarousel: typeof import("element-plus/es")["ElCarousel"]
     ElCarouselItem: typeof import("element-plus/es")["ElCarouselItem"]
@@ -13,6 +14,8 @@ declare module "vue" {
     ElImage: typeof import("element-plus/es")["ElImage"]
     ElMain: typeof import("element-plus/es")["ElMain"]
     ElScrollbar: typeof import("element-plus/es")["ElScrollbar"]
+    ElTabPane: typeof import("element-plus/es")["ElTabPane"]
+    ElTabs: typeof import("element-plus/es")["ElTabs"]
     MyBanner: typeof import("./src/components/common/banner/MyBanner.vue")["default"]
     MyFooter: typeof import("./src/components/layout/footer/MyFooter.vue")["default"]
     MyHeader: typeof import("./src/components/layout/header/MyHeader.vue")["default"]

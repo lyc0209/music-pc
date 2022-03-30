@@ -16,6 +16,37 @@ const routes: Array<RouteRecordRaw> = [
           menu: Pages.recommend,
           keepAlive: true
         }
+      },
+      {
+        path: "music-hall",
+        name: Pages.musicHall,
+        component: () =>
+          import(/* webpackChunkName: "music-hall" */ "@/views/music-hall/MusicHall.vue"),
+        redirect: { name: Pages.selection },
+        meta: {
+          menu: Pages.musicHall,
+          keepAlive: true
+        },
+        children: [
+          {
+            path: "selection",
+            name: Pages.selection,
+            component: () => import("@/components/layout/music-hall/Selection.vue"),
+            meta: {
+              menu: Pages.musicHall,
+              keepAlive: true
+            }
+          },
+          {
+            path: "music-list",
+            name: Pages.musicList,
+            component: () => import("@/components/layout/music-hall/HallMusicList.vue"),
+            meta: {
+              menu: Pages.musicHall,
+              keepAlive: true
+            }
+          }
+        ]
       }
     ]
   }
