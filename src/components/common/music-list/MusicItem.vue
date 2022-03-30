@@ -1,6 +1,6 @@
 <template>
   <div class="music-item">
-    <el-image :src="musicItem.picUrl" :fit="fit" />
+    <el-image :src="musicItem.picUrl" />
     <div class="music-name">{{ musicItem.name }}</div>
   </div>
 </template>
@@ -9,7 +9,7 @@
 import { defineProps } from "vue"
 
 defineProps<{
-  musicItem: any[]
+  musicItem: object
 }>()
 </script>
 

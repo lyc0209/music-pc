@@ -17,7 +17,6 @@ const store = useStore()
 const bannerList = computed(() => store.getters["recommend/bannerList"])
 
 const getData = () => {
-  console.log("eee")
   store.dispatch("recommend/getBannerListAction")
 }
 
