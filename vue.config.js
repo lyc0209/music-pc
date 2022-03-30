@@ -15,6 +15,18 @@ module.exports = defineConfig({
       }
     }
   },
+  devServer: {
+    port: 8080,
+    proxy: {
+      "^/api": {
+        target: "http://192.168.123.132:3000",
+        pathRewrite: {
+          "^/api": ""
+        },
+        changeOrigin: true
+      }
+    }
+  },
   configureWebpack: {
     plugins: [
       AutoImport({

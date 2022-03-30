@@ -2,17 +2,22 @@
 // We suggest you to commit this file into source control
 // Read more: https://github.com/vuejs/vue-next/pull/3399
 
-declare module 'vue' {
+declare module "vue" {
   export interface GlobalComponents {
-    ElAside: typeof import('element-plus/es')['ElAside']
-    ElContainer: typeof import('element-plus/es')['ElContainer']
-    ElFooter: typeof import('element-plus/es')['ElFooter']
-    ElHeader: typeof import('element-plus/es')['ElHeader']
-    ElImage: typeof import('element-plus/es')['ElImage']
-    ElMain: typeof import('element-plus/es')['ElMain']
-    ElScrollbar: typeof import('element-plus/es')['ElScrollbar']
-    Menu: typeof import('./src/components/menu/Menu.vue')['default']
+    ElAside: typeof import("element-plus/es")["ElAside"]
+    ElCarousel: typeof import("element-plus/es")["ElCarousel"]
+    ElCarouselItem: typeof import("element-plus/es")["ElCarouselItem"]
+    ElContainer: typeof import("element-plus/es")["ElContainer"]
+    ElFooter: typeof import("element-plus/es")["ElFooter"]
+    ElHeader: typeof import("element-plus/es")["ElHeader"]
+    ElImage: typeof import("element-plus/es")["ElImage"]
+    ElMain: typeof import("element-plus/es")["ElMain"]
+    ElScrollbar: typeof import("element-plus/es")["ElScrollbar"]
+    MyBanner: typeof import("./src/components/banner/MyBanner.vue")["default"]
+    MyFooter: typeof import("./src/components/footer/MyFooter.vue")["default"]
+    MyHeader: typeof import("./src/components/header/MyHeader.vue")["default"]
+    MyMenu: typeof import("./src/components/menu/MyMenu.vue")["default"]
   }
 }
 
-export { }
+export {}
