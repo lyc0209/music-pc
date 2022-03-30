@@ -11,13 +11,13 @@ export const useMenus = () => {
       menuList: [
         {
           name: "推荐",
-          key: Pages.recommend,
+          key: Pages.recommend.name,
           icon: Icon.recommend,
           theme: "outline"
         },
         {
           name: "音乐馆",
-          key: Pages.musicHall,
+          key: Pages.musicHall.name,
           icon: Icon.music,
           theme: "outline"
         },

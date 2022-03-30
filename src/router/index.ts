@@ -4,45 +4,45 @@ import { Pages } from "@/router/pages"
 const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
-    name: Pages.index,
+    name: Pages.index.name,
     component: () => import("@/views/Index.vue"),
-    redirect: { name: Pages.recommend },
+    redirect: { name: Pages.recommend.name },
     children: [
       {
         path: "recommend",
-        name: Pages.recommend,
+        name: Pages.recommend.name,
         component: () => import("@/views/recommend/Recommend.vue"),
         meta: {
-          menu: Pages.recommend,
+          menu: Pages.recommend.name,
           keepAlive: true
         }
       },
       {
         path: "music-hall",
-        name: Pages.musicHall,
+        name: Pages.musicHall.name,
         component: () =>
           import(/* webpackChunkName: "music-hall" */ "@/views/music-hall/MusicHall.vue"),
-        redirect: { name: Pages.selection },
+        redirect: { name: Pages.musicHall.children.selection.name },
         meta: {
-          menu: Pages.musicHall,
+          menu: Pages.musicHall.name,
           keepAlive: true
         },
         children: [
           {
             path: "selection",
-            name: Pages.selection,
+            name: Pages.musicHall.children.selection.name,
             component: () => import("@/components/layout/music-hall/Selection.vue"),
             meta: {
-              menu: Pages.musicHall,
+              menu: Pages.musicHall.name,
               keepAlive: true
             }
           },
           {
             path: "music-list",
-            name: Pages.musicList,
+            name: Pages.musicHall.children.musicList.name,
             component: () => import("@/components/layout/music-hall/HallMusicList.vue"),
             meta: {
-              menu: Pages.musicHall,
+              menu: Pages.musicHall.name,
               keepAlive: true
             }
           }

@@ -6,19 +6,19 @@ export const useTabs = () => {
   const tabs: Tab[] = [
     {
       label: "精选",
-      name: Pages.selection
+      name: Pages.musicHall.children.selection.name
     },
     {
       label: "排行榜",
-      name: Pages.rankingList
+      name: Pages.musicHall.children.rankingList.name
     },
     {
       label: "歌手",
-      name: Pages.singer
+      name: Pages.musicHall.children.singer.name
     },
     {
       label: "分类歌单",
-      name: Pages.musicList
+      name: Pages.musicHall.children.musicList.name
     }
   ]
 
