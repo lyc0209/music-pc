@@ -20,6 +20,7 @@ module.exports = {
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "vue/no-mutating-props": "off",
     "@typescript-eslint/no-non-null-assertion": "off",
-    "vue/multi-word-component-names": 0
+    "vue/multi-word-component-names": 0,
+    "no-undef": 0
   }
 }

@@ -5,9 +5,8 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps } from "vue"
 import MusicItem from "@/components/common/music-list/MusicItem.vue"
-import { IMusicItem } from "./types"
+import { IMusicItem } from "@/service/types"
 
 defineProps<{
   musics: IMusicItem[]

@@ -2,7 +2,7 @@ import { Module } from "vuex"
 import { IRootState } from "@/store/types"
 import { IMusicHallState } from "@/store/music-hall/types"
 import { getTopMusicList } from "@/service/music-hall/music-hall"
-import { IMusicItem } from "@/components/common/music-list/types"
+import { IMusicItem } from "@/service/types"
 
 const musicHallModule: Module<IMusicHallState, IRootState> = {
   namespaced: true,
@@ -15,7 +15,7 @@ const musicHallModule: Module<IMusicHallState, IRootState> = {
     }
   },
   actions: {
-    async getMusicListAction({ commit }, payload: { limit: number }) {
+    async getMusicListAction({ commit }) {
       const result = await getTopMusicList()
       // 类型转换
       const list: IMusicItem[] = result.playlists.map((item: any) => {

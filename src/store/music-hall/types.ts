@@ -1,4 +1,4 @@
-import { IMusicItem } from "@/components/common/music-list/types"
+import { IMusicItem } from "@/service/types"
 
 export interface IMusicHallState {
   musicList: IMusicItem[]

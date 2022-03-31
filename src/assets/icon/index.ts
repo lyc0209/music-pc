@@ -7,5 +7,6 @@ export const Icon = {
   radioStation: `${prefix}radio-station`,
   collection: `${prefix}collection`,
   local: `${prefix}local`,
-  musicList: `${prefix}music-list`
+  musicList: `${prefix}music-list`,
+  avatar: `${prefix}avatar`
 }

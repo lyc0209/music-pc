@@ -47,6 +47,15 @@ const routes: Array<RouteRecordRaw> = [
             }
           }
         ]
+      },
+      {
+        path: "music-list-detail",
+        name: Pages.musicListDetail.name,
+        component: () => import("@/views/music-list-detail/MusicListDetail.vue"),
+        meta: {
+          menu: "",
+          keepAlive: false
+        }
       }
     ]
   }

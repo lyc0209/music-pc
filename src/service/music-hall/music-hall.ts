@@ -1,5 +1,4 @@
 import lycRequest from "@/service"
-import * as url from "url"
 
 enum MusicHallApi {
   topMusicList = "top/playlist"

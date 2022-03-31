@@ -2,7 +2,7 @@ import { Module } from "vuex"
 import { IRecommendState } from "@/store/recommend/types"
 import { IRootState } from "@/store/types"
 import { getBannerList, getMusicList } from "@/service/recommend/recommend"
-import { IMusicItem } from "@/components/common/music-list/types"
+import { IMusicItem } from "@/service/types"
 
 const recommendModule: Module<IRecommendState, IRootState> = {
   namespaced: true,

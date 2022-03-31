@@ -2,7 +2,6 @@ import axios from "axios"
 import type { AxiosInstance } from "axios"
 import { LycRequestInterceptors, LycRequestConfig } from "./types"
 import { ElLoading } from "element-plus"
-import { IDataType } from "../types"
 
 // 默认是否显示加载框
 const DEFAULT_LOADING = false

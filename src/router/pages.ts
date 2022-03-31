@@ -1,8 +1,3 @@
-interface Page {
-  name: string
-  children: Page[] | null
-}
-
 export const Pages = {
   index: {
     name: "index",
@@ -32,6 +27,10 @@ export const Pages = {
         children: null
       }
     }
+  },
+  musicListDetail: {
+    name: "music-list-detail",
+    children: null
   }
 }
 

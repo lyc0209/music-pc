@@ -1,7 +1,8 @@
 import { IRecommendState } from "@/store/recommend/types"
+import { IMyProfile } from "@/service/types"
 
 export interface IRootState {
-  count: number
+  profile: IMyProfile | null
 }
 
 interface IRootWithModule {

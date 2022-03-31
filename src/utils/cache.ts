@@ -7,7 +7,7 @@ class LocalCache {
     }
   }
 
-  getCache(key: string, isUseLocalStorage = true) {
+  getCache<T>(key: string, isUseLocalStorage = true): T | null {
     let value = null
     if (isUseLocalStorage) {
       value = window.localStorage.getItem(key)
@@ -16,12 +16,12 @@ class LocalCache {
     }
     if (value) {
       try {
-        return JSON.parse(value)
+        return JSON.parse(value) as T
       } catch (error) {
-        return ""
+        return null
       }
     } else {
-      return ""
+      return null
     }
   }
 
