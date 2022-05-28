@@ -4,6 +4,9 @@ export interface IDataType<T = any> {
   msg: string
 }
 
+/**
+ * 歌单卡片
+ */
 export interface IMusicItem {
   id: number
   name: string
@@ -12,11 +15,29 @@ export interface IMusicItem {
 }
 
 /**
- * 我的资料
+ * 我的资料/用户信息
  */
-export interface IMyProfile {
+export interface IUser {
   userId: number
   nickname: string
   avatarUrl: string
   gender: number
+  signature: string //个性签名
+}
+
+/**
+ * 歌单详情
+ */
+export interface IMusicListDetail {
+  id: number
+  name: number
+  coverImgUrl: string // 歌单封面
+  playCount: number
+  description: string
+  tags: string[]
+  subscribedCount: number // 收藏数量
+  shareCount: number // 分享数量
+  commentCount: number // 评论数量
+  createTime: string
+  creator: IUser
 }

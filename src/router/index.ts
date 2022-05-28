@@ -1,48 +1,48 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router"
-import { Pages } from "@/router/pages"
+import { Types } from "@/router/types"
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
-    name: Pages.index.name,
+    name: Types.index.name,
     component: () => import("@/views/Index.vue"),
-    redirect: { name: Pages.recommend.name },
+    redirect: { name: Types.recommend.name },
     children: [
       {
         path: "recommend",
-        name: Pages.recommend.name,
+        name: Types.recommend.name,
         component: () => import("@/views/recommend/Recommend.vue"),
         meta: {
-          menu: Pages.recommend.name,
+          menu: Types.recommend.name,
           keepAlive: true
         }
       },
       {
         path: "music-hall",
-        name: Pages.musicHall.name,
+        name: Types.musicHall.name,
         component: () =>
           import(/* webpackChunkName: "music-hall" */ "@/views/music-hall/MusicHall.vue"),
-        redirect: { name: Pages.musicHall.children.selection.name },
+        redirect: { name: Types.musicHall.children.selection.name },
         meta: {
-          menu: Pages.musicHall.name,
+          menu: Types.musicHall.name,
           keepAlive: true
         },
         children: [
           {
             path: "selection",
-            name: Pages.musicHall.children.selection.name,
+            name: Types.musicHall.children.selection.name,
             component: () => import("@/components/layout/music-hall/Selection.vue"),
             meta: {
-              menu: Pages.musicHall.name,
+              menu: Types.musicHall.name,
               keepAlive: true
             }
           },
           {
             path: "music-list",
-            name: Pages.musicHall.children.musicList.name,
+            name: Types.musicHall.children.musicList.name,
             component: () => import("@/components/layout/music-hall/HallMusicList.vue"),
             meta: {
-              menu: Pages.musicHall.name,
+              menu: Types.musicHall.name,
               keepAlive: true
             }
           }
@@ -50,7 +50,7 @@ const routes: Array<RouteRecordRaw> = [
       },
       {
         path: "music-list-detail",
-        name: Pages.musicListDetail.name,
+        name: Types.musicListDetail.name,
         component: () => import("@/views/music-list-detail/MusicListDetail.vue"),
         meta: {
           menu: "",

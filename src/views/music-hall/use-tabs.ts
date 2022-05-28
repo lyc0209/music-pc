@@ -1,4 +1,4 @@
-import { Pages } from "@/router/pages"
+import { Types } from "@/router/types"
 import { useRoute, useRouter } from "vue-router"
 import { ref, watch } from "vue"
 
@@ -6,19 +6,19 @@ export const useTabs = () => {
   const tabs: Tab[] = [
     {
       label: "精选",
-      name: Pages.musicHall.children.selection.name
+      name: Types.musicHall.children.selection.name
     },
     {
       label: "排行榜",
-      name: Pages.musicHall.children.rankingList.name
+      name: Types.musicHall.children.rankingList.name
     },
     {
       label: "歌手",
-      name: Pages.musicHall.children.singer.name
+      name: Types.musicHall.children.singer.name
     },
     {
       label: "分类歌单",
-      name: Pages.musicHall.children.musicList.name
+      name: Types.musicHall.children.musicList.name
     }
   ]
 

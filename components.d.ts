@@ -26,6 +26,7 @@ declare module 'vue' {
     Login: typeof import('./src/components/dialog/login/Login.vue')['default']
     MusicItem: typeof import('./src/components/common/music-list/MusicItem.vue')['default']
     MusicList: typeof import('./src/components/common/music-list/MusicList.vue')['default']
+    MusicListDetailHeader: typeof import('./src/components/common/music-list-detail-header/MusicListDetailHeader.vue')['default']
     MyBanner: typeof import('./src/components/common/banner/MyBanner.vue')['default']
     MyFooter: typeof import('./src/components/layout/footer/MyFooter.vue')['default']
     MyHeader: typeof import('./src/components/layout/header/MyHeader.vue')['default']

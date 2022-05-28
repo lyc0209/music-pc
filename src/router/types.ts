@@ -1,4 +1,6 @@
-export const Pages = {
+import "vue-router"
+
+export const Types = {
   index: {
     name: "index",
     children: null
@@ -34,12 +36,9 @@ export const Pages = {
   }
 }
 
-// export const Pages = {
-//   index: "index",
-//   recommend: "recommend",
-//   musicHall: "music-hall",
-//   selection: "selection", // 精选
-//   rankingList: "ranking-list", // 排行榜
-//   singer: "singer", // 歌手
-//   musicList: "music-list"
-// }
+declare module "vue-router" {
+  interface RouteMeta {
+    keepAlive: boolean
+    menu?: string
+  }
+}

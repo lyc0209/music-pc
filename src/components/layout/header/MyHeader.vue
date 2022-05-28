@@ -25,13 +25,13 @@ import { Icon } from "@/assets/icon"
 import { computed, ref } from "vue"
 import Login from "@/components/dialog/login/Login.vue"
 import { useStore } from "@/store"
-import { IMyProfile } from "@/service/types"
+import { IUser } from "@/service/types"
 
 const store = useStore()
 
 const showLoginDialog = ref<boolean>(false)
 
-const myProfile = computed<IMyProfile>(() => store.getters.profile)
+const myProfile = computed<IUser>(() => store.getters.profile)
 
 const handleLoginClick = () => {
   showLoginDialog.value = true

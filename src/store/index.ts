@@ -3,9 +3,10 @@ import { createStore, useStore as baseUseStore, Store } from "vuex"
 import { IRootState, IStoreType } from "@/store/types"
 import recommend from "@/store/recommend/recommend"
 import musicHall from "@/store/music-hall/music-hall"
-import { IMyProfile } from "@/service/types"
+import { IUser } from "@/service/types"
 import { loginByCellPhone } from "@/service/login/login"
 import localCache from "@/utils/cache"
+import musicListDetail from "@/store/music-list-detail/music-list-detail"
 
 export const key: InjectionKey<Store<IStoreType>> = Symbol()
 
@@ -14,7 +15,7 @@ const store = createStore<IRootState>({
     profile: null
   }),
   mutations: {
-    updateProfile(state, profile: IMyProfile) {
+    updateProfile(state, profile: IUser) {
       state.profile = profile
     }
   },
@@ -23,7 +24,7 @@ const store = createStore<IRootState>({
       const result = await loginByCellPhone(payload).catch((err) => {
         return Promise.reject(err)
       })
-      const profile: IMyProfile = { ...result.profile }
+      const profile: IUser = { ...result.profile }
       localCache.setCache("profile", profile)
       commit("updateProfile", profile)
     },
@@ -32,7 +33,7 @@ const store = createStore<IRootState>({
      * @param commit
      */
     initData({ commit }) {
-      const myProfile = localCache.getCache<IMyProfile>("profile")
+      const myProfile = localCache.getCache<IUser>("profile")
       if (myProfile) {
         commit("updateProfile", myProfile)
       }
@@ -43,7 +44,8 @@ const store = createStore<IRootState>({
   },
   modules: {
     recommend,
-    musicHall
+    musicHall,
+    musicListDetail
   }
 })
 

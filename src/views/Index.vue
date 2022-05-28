@@ -11,6 +11,17 @@
         <el-main>
           <el-scrollbar>
             <router-view class="router-view" />
+            <!--            <router-view v-slot="{ Component }" class="router-view">-->
+            <!--              <keep-alive>-->
+            <!--                <component v-if="$route.meta.keepAlive" :is="Component" />-->
+            <!--              </keep-alive>-->
+            <!--              <component v-if="!$route.meta.keepAlive" :is="Component" />-->
+            <!--            </router-view>-->
+
+            <!--            <keep-alive>-->
+            <!--              <router-view v-if="$route.meta.keepAlive" class="router-view" />-->
+            <!--            </keep-alive>-->
+            <!--            <router-view v-if="!$route.meta.keepAlive" class="router-view" />-->
           </el-scrollbar>
         </el-main>
         <el-footer>

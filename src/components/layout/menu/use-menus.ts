@@ -1,5 +1,5 @@
 import { IMenu, IMenuGroup } from "@/components/layout/menu/types"
-import { Pages } from "@/router/pages"
+import { Types } from "@/router/types"
 import { useRoute, useRouter } from "vue-router"
 import { ref, watch } from "vue"
 import { Icon } from "@/assets/icon"
@@ -11,13 +11,13 @@ export const useMenus = () => {
       menuList: [
         {
           name: "推荐",
-          key: Pages.recommend.name,
+          key: Types.recommend.name,
           icon: Icon.recommend,
           theme: "outline"
         },
         {
           name: "音乐馆",
-          key: Pages.musicHall.name,
+          key: Types.musicHall.name,
           icon: Icon.music,
           theme: "outline"
         },

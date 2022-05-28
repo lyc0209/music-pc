@@ -19,7 +19,7 @@ const musicHallModule: Module<IMusicHallState, IRootState> = {
       const result = await getTopMusicList()
       // 类型转换
       const list: IMusicItem[] = result.playlists.map((item: any) => {
-        return { id: item.id, name: item.name, picUrl: item.coverImgUrl, playCount: item.playCount }
+        return { id: item.id, name: item.name, picUrl: item.picUrl, playCount: item.playCount }
       })
       commit("updateMusicList", list)
     }
