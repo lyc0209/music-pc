@@ -7,6 +7,7 @@ import { IUser } from "@/service/types"
 import { loginByCellPhone } from "@/service/login/login"
 import localCache from "@/utils/cache"
 import musicListDetail from "@/store/music-list-detail/music-list-detail"
+import songList from "@/store/song-list/song-list"
 
 export const key: InjectionKey<Store<IStoreType>> = Symbol()
 
@@ -45,7 +46,8 @@ const store = createStore<IRootState>({
   modules: {
     recommend,
     musicHall,
-    musicListDetail
+    musicListDetail,
+    songList
   }
 })
 

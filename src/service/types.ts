@@ -40,4 +40,16 @@ export interface IMusicListDetail {
   commentCount: number // 评论数量
   createTime: string
   creator: IUser
+  trackIds: { id: string }[]
+}
+
+/**
+ * 歌曲信息
+ */
+export interface ISong {
+  id: number
+  name: string
+  dt: number // 歌曲时长
+  ar: { id: number; name: string }[] //歌手列表
+  al: { id: number; name: string; picUrl: string } | null // 专辑信息
 }

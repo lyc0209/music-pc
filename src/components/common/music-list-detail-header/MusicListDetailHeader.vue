@@ -2,7 +2,7 @@
 <template>
   <div class="m-music-list-detail-header">
     <el-image class="m-cover-img" :src="musicListDetail?.coverImgUrl" fit="fill" />
-    <div>
+    <div class="m-header-right">
       <h1>{{ musicListDetail?.name }}</h1>
       <div class="m-user-and-tag">
         <div class="m-user-info">
@@ -46,30 +46,33 @@ const musicListDetail = computed<IMusicListDetail>(
     border-radius: 10px;
     margin-right: 30px;
   }
-  .m-user-and-tag {
-    display: flex;
-    align-items: center;
-    .m-user-info {
+  .m-header-right {
+    flex: 1;
+    .m-user-and-tag {
       display: flex;
       align-items: center;
-      .m-user-avatar {
-        width: 30px;
-        height: 30px;
-        margin-right: 10px;
-        border-radius: 50%;
+      .m-user-info {
+        display: flex;
+        align-items: center;
+        .m-user-avatar {
+          width: 30px;
+          height: 30px;
+          margin-right: 10px;
+          border-radius: 50%;
+        }
+      }
+      .m-tag {
+        color: #7b7b7b;
+        margin-left: 20px;
       }
     }
-    .m-tag {
+    .m-description {
       color: #7b7b7b;
-      margin-left: 20px;
+      margin-top: 10px;
     }
-  }
-  .m-description {
-    color: #7b7b7b;
-    margin-top: 10px;
-  }
-  .m-button {
-    margin-top: 30px;
+    .m-button {
+      margin-top: 30px;
+    }
   }
 }
 </style>
